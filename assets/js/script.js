@@ -37,6 +37,9 @@ function goNext(){
 
 // Atualiza a margem do slide
 function updateMargin () {
-	let newMargin = (currentSlide * document.body.clientWidth);
+	let sliderWidth = qs('.slider-item').clientWidth;
+	let newMargin = (currentSlide * sliderWidth);
 	document.querySelector('.slider-width').style.marginLeft = `-${newMargin}px`
 }
+
+setInterval(goNext, 3000);
